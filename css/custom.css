@@ -1,0 +1,567 @@
+/***************************************
+* 				 general 
+****************************************/
+
+/* the page now has no white space on edges of screen */
+html, body {
+	margin-right: 0;
+	margin-left: 0;
+	margin-bottom: 0;
+	margin-top: 0;
+	background: white;
+}
+
+/* headers and important text customized */
+h4, h3 {
+	color: #666666;
+	font-family: 'Cinzel', serif !important;
+	text-align: center;
+}
+
+/* for devices smaller than a screen, main images are pushed down so
+the navigation bar doesn't cover up important text. How much they are
+pushed down varies on the size of the screen (tablet, large phone, small phone) */
+@media screen and (max-width: 550px){
+	body{padding-top: 60px;}
+}
+@media screen and (min-width: 551px) and (max-width: 650px){
+	body { padding-top: 40px;}
+}
+
+@media screen and (min-width: 760px){
+	#mainRow {
+		margin-top: 3%;
+		margin-right: 0;
+		margin-left: 0;
+		margin-bottom: 0;
+	}
+
+	#mainImageContainer {
+		position: relative;
+		margin-right: 0;
+		margin-left: 0;
+		padding: 0;
+		margin-bottom: 0;
+	}
+	#mainImage > img {
+		width: 100%;
+	}
+
+};
+
+
+/******************************************
+*			Main Image
+*******************************************/
+
+/* holds the main picture at the top of each page */
+#mainImageContainer {
+	position: relative;
+	margin-right: 0;
+	margin-left: 0;
+	padding: 0;
+	margin-bottom: 0;
+}
+
+/* the main picture spans the entire screen */
+#mainImage, #mainImageOne {
+	margin-right: 0;
+	margin-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+/* default picture for non-mobile screens */
+#mainImageOne {
+	display: none;
+}
+
+#mainImage > img {
+	width: 100% !important;
+}
+
+/* when the screen changes to a mobile size (tablet/phone), the
+main picture changes so the information in the picture doesn't 
+continue to shrink, and can remain readable */
+@media only screen  and (max-width: 767px){
+	#mainImage { display: none;}
+	#mainImageContainer {
+		position: relative;
+		margin-right: 0;
+		margin-left: 0;
+		padding: 0;
+		margin-bottom: 0;
+	}
+	#mainImageOne { 
+		display: block;
+		margin: 0 !important;
+	}
+	#mainImageOne > img {width: 100% !important;}
+	#longLineNoPadding {
+		margin-bottom: 0;
+		margin-top: 0;
+		padding: 0;
+	}
+	#longLineNoPadding > img {
+		width: 100% !important;
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: 0;
+		margin-top: 0;
+		padding: 0 !important;
+	}
+};
+
+/*******************************************
+*			line decoration
+********************************************/
+
+/* holds the line picture */
+#lineLine {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+/* basic black line picture, some padding for
+proper whitespace on the screen */
+#longLine > img {
+	width: 100% !important;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 5%;
+	padding-top: 3%;
+	padding-bottom: 1%;
+}
+
+/* same black line, but no whitespace around
+it. Used primarily at bottom of non-main page
+pages, above and below the buttons */
+#longLineNoPadding {
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+#longLineNoPadding > img {
+	width: 100% !important;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0 !important;
+}
+
+
+/*******************************************
+*		navigation bar at the top
+* "!important" overrides default setting for
+* boostrap navigation bars. Removing it may result
+* in your selected styles being ignored! =)
+*******************************************/
+
+/* set navigation bar color */
+.navbar {
+	background-color: black;
+}
+
+/* set text for the navigation bar */
+.navbar a {
+	color: #C2C2A3 !important;
+	font-family: 'Cinzel', serif;!important;
+	font-size: 1em;
+	border-left: 1px solid white !important;
+	margin-right: 10px !important;
+}
+
+/* the first link in the bar needs a line to the left
+as well as to the right */
+.navbar a:first-child {
+	border-left: 1px solid black !important;
+}
+
+
+/* style information that drops down from the dropdowns */
+.navbar .navbar-right li > a:hover {
+	background-color: #CCCCCC !important;
+	color: black !important;
+	font-weight: bold;
+}
+
+.dropdown li > a {
+	color: black !important;
+}
+
+/* when switching to mobile, the navigation bar needs to shrink
+into a new section, and a menu box needs to display */
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+@media screen and (max-width: 780px) { 
+    .navbar .navbar-nav {
+        display: inline-block !important;
+        float: none !important;
+        vertical-align: top !important;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: right !important;
+    }
+};
+
+
+
+/*******************************************
+*				 buttons
+*******************************************/
+
+/* section that holds the buttons. Pads appropriately */
+#buttonBackground {
+	margin-top: 5% !important;
+	margin-bottom: 2%;
+	padding-top: 2% !important;
+	padding-bottom: 2%;
+}
+
+
+/* style the buttons. Used primarily for left button */
+.buttonStuff {
+	display: inline-block; 	/* puts them in a row */
+	margin-left: 8%;		/* pushes them out from the left */
+	width: 40% !important;	/* They'll adjust size for any size screen */
+	padding-bottom: 3%;
+	padding-top: 3%;
+	margin-right: 5%;
+	background: #cdb7de;	/* Here and below creates a fade between two colors */
+	background: -moz-linear-gradient(#666, #c2c2a3 50%, #666);
+	background: -o-linear-gradient(#666, #c2c2a3 50%, #666);
+	background: -webkit-linear-gradient(#666, #c2c2a3 50%, #666);
+	background: linear-gradient(#666, #c2c2a3 50%, #666);
+	border: 1px solid #B2B2B2;
+	border-radius: 5px;		/* rounds the button */
+	box-shadow: 1px 1px 0 0 #c2c2a3;
+	color: black;
+	font-family: 'Cinzel', serif !important;
+	text-align: center;
+	text-shadow: 1px 1px 0 #E0E0E0 ;
+	font-size: 1.5em;		/* em makes the font size change depending on screen size */
+}
+
+
+/* Different amount of padding than original container. Used primarily on all sites that are
+not the main page */
+#buttonBackground2 {
+	padding-top: 3%;
+	padding-bottom: 3%;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	background-color: #CCCCCC;
+}
+
+/* Same buttons, different padding (whitepace) around them. Primarily left button */
+.buttonStuff2 {
+	display: inline-block; 
+	margin-left: 10%;
+	width: 40% !important;
+	padding-bottom: 3%;
+	padding-top: 3%;
+	margin-right: 5%;
+	background: #cdb7de;
+	background: -moz-linear-gradient(#666, #c2c2a3 50%, #666);
+	background: -o-linear-gradient(#666, #c2c2a3 50%, #666);
+	background: -webkit-linear-gradient(#666, #c2c2a3 50%, #666);
+	background: linear-gradient(#666, #c2c2a3 50%, #666);
+	border: 1px solid #B2B2B2;
+	border-radius: 5px;
+	box-shadow: 1px 1px 0 0 #c2c2a3;
+	color: black;
+	font-family: 'Cinzel', serif !important;
+	text-align: center;
+	text-shadow: 1px 1px 0 #E0E0E0 ;
+	font-size: 1.5em;
+}
+
+/* Same buttons, different padding (whitespace) around them. Primarily used for right button */
+.buttonStuff3{
+	display: inline-block; 
+	margin-left: 0;
+	width: 40% !important;
+	padding-bottom: 3%;
+	padding-top: 3%;
+	background: #cdb7de;
+	background: -moz-linear-gradient(#666, #c2c2a3 50%, #666);
+	background: -o-linear-gradient(#666, #c2c2a3 50%, #666);
+	background: -webkit-linear-gradient(#666, #c2c2a3 50%, #666);
+	background: linear-gradient(#666, #c2c2a3 50%, #666);
+	border: 1px solid #B2B2B2;
+	border-radius: 5px;
+	box-shadow: 1px 1px 0 0 #c2c2a3;
+	color: black;
+	font-family: 'Cinzel', serif !important;
+	text-align: center;
+	text-shadow: 1px 1px 0 #E0E0E0 ;
+	font-size: 1.5em;
+}
+
+/* When the screen is mobile sized (super small!) The button text needs to
+stay within the button. To do this, the buttons need to change from being in 
+a row, to stacking vertically. This section recreates the buttons and text,
+and stacks them vertically only when the screen is super tiny */
+@media screen and (max-width: 585px){
+	.buttonStuff3{
+		display: inline-block; 
+		margin-left: 0;
+		width: 40% !important;
+		padding-bottom: 3%;
+		padding-top: 3%;
+		background: #cdb7de;
+		background: -moz-linear-gradient(#666, #c2c2a3 50%, #666);
+		background: -o-linear-gradient(#666, #c2c2a3 50%, #666);
+		background: -webkit-linear-gradient(#666, #c2c2a3 50%, #666);
+		background: linear-gradient(#666, #c2c2a3 50%, #666);
+		border: 1px solid #B2B2B2;
+		border-radius: 5px;
+		box-shadow: 1px 1px 0 0 #c2c2a3;
+		color: black;
+		font-family: 'Cinzel', serif !important;
+		text-align: center;
+		text-shadow: 1px 1px 0 #E0E0E0 ;
+		font-size: 1em;
+	}
+
+	.buttonStuff {
+		display: inline-block; 
+		margin-left: 8%;
+		width: 40% !important;
+		padding-bottom: 3%;
+		padding-top: 3%;
+		margin-right: 5%;
+		background: #cdb7de;
+		background: -moz-linear-gradient(#666, #c2c2a3 50%, #666);
+		background: -o-linear-gradient(#666, #c2c2a3 50%, #666);
+		background: -webkit-linear-gradient(#666, #c2c2a3 50%, #666);
+		background: linear-gradient(#666, #c2c2a3 50%, #666);
+		border: 1px solid #B2B2B2;
+		border-radius: 5px;
+		box-shadow: 1px 1px 0 0 #c2c2a3;
+		color: black;
+		font-family: 'Cinzel', serif !important;
+		text-align: center;
+		text-shadow: 1px 1px 0 #E0E0E0 ;
+		font-size: 1em;
+	}
+};
+
+/*****************************************************
+*			Additional Info
+*****************************************************/
+
+/* section that holds text at the bottom of the page.
+Refers to the section on reservations */
+.addInfo{
+	margin-top: 0;
+	margin-bottom: 3%;
+}
+
+
+/****************************************************
+*		Event Info Page: Event box
+****************************************************/
+#eventInfo {
+	background: #666666;
+	border: 1px solid #666666;
+	border-radius: 10px;
+	width: 60%;
+	margin-left: 20%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+
+#eventCol {
+	text-align: center;
+	background-color: white;
+	border: 2px solid #C2C2A3;
+	border-radius: 10px;
+	width: 80%;
+	padding: 0;
+	margin-left: 10%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	color: black;
+}
+
+
+/****************************************************
+*		Donor Info Page: Donor List
+****************************************************/
+
+/* styles the section that has donor information */
+#donorInfo {
+	background: #666666;
+	border: 1px solid #666666;
+	border-radius: 10px;
+	width: 90%;		/* adjust with page size */
+	margin-left: 5%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+/* Three rows of information on a normal sized screen,
+padded for easy reading */
+#donorCol {
+	text-align: center;
+	background-color: white;
+	border: 2px solid #C2C2A3;
+	border-radius: 10px;
+	width: 80%;
+	padding: 0;
+	margin-left: 10%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	color: black;
+}
+
+/* the middle column, when there is three, has a line on
+the right and left side so the columns are clear */
+#middle {
+	border-right: 1px solid #666666;
+	border-left: 1px solid #666666;
+}
+
+
+/******************************************************
+*			Event Information page: Panel (FAQs)
+*******************************************************/
+
+/* style the "answers" to the FAQs */
+.panel, .panel1, .panel2, .panel3{
+	padding-top: 1%;
+	background-color: #C2C2A3;
+	border-bottom: solid 1px black;
+}
+
+/* Is within the "panels." This is the white background
+that holds the text for the answers */
+.inner {
+	margin-top: 1%;
+	margin-bottom: 1%;
+	margin-left: 10%;
+	margin-right: 10%;
+	background-color: white;
+	border: 1px solid white;
+	border-radius: 10px;
+}
+
+/* styles the actual text that is the answers. Padded
+for easy reading */
+.inner p {
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+
+/* Styles the "Question" part of the FAQs that is seen
+without clicking */
+.flip, .flip1, .flip2, .flip3 {
+	padding: 1%;
+	text-align: center;
+	border-bottom: solid 1px black;
+}
+
+/* Hides the answer until clicked */
+.panel, .panel1, .panel2, .panel3 {
+	padding: 1%;
+	display: none;
+}
+
+/* Provides styling for FAQs */
+#faq {
+	margin: 0;
+	padding: 1%;
+	background-color: #c2c2a3;
+	font-family: 'Cinzel', serif !important;
+	margin-bottom: 3% !important;
+}
+
+#faq > h4 {
+	text-align: center;
+	color: black;
+	font-weight: bold !important;
+}
+
+#faq2 {
+	margin: 0;
+	padding: 1%;
+	background-color: #c2c2a3;
+	font-family: 'Cinzel', serif !important;
+	margin-top: 3% !important;
+	margin-bottom: 0;
+}
+
+#faq2 > h4 {
+	text-align: center;
+	color: black;
+	font-weight: bold !important;
+}
+
+
+/*****************************************************
+*			Event Photos: Carousel
+******************************************************/
+
+/* positions the carousel in the middle */
+.carousel {
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 2%;
+}
+
+.carousel-inner > .item, .carousel-inner > .active {
+	margin-top: 3%;
+}
+
+/* creates a border around the pictures, colors it, and rounds the edges */
+.carousel-inner > .item > img, .carousel-inner > .active > img {
+	background-color: #c2c2a3;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	padding-left: 5%;
+	padding-right: 5%;
+	max-height: 500px;	/* How tall the pictures can be */
+	margin: 0 auto;
+	border: 1px solid #CCCCCC;
+    border-radius: 10px !important;
+}
+
+
+/* Left and right arrows, positioned */
+i {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-block;
+  margin-top: -10px;
+ }
+
+.fa-angle-double-right {
+	color: black !important;
+ 	right: 20%;
+ 	margin-left: -10px;
+ }
+
+.fa-angle-double-left {
+	color: black !important;
+ 	margin-right: 20%;
+ 	margin-right: -10px;
+ }
+
+

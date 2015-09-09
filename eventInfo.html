@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Feel free to fill in if you'd like to reuse this for future events -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <!-- Title -->
+    <title>Auction Information</title>
+
+    <!-- Links to style sheets, including better font and icons -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
+  </head>
+
+   <body>
+    <!-- ****************************************************************************
+    *             SECTION: Navigation Bar
+    *******************************************************************************-->
+    <!-- Navbar fixed to top of page -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+       <div class="navbar-header">
+        </div> 
+
+        <!-- This section is hidden, will be be filled with "#navigationbar"s data when on a mobile screen -->
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+
+          <!-- Left side of navigation bar, has the return to St. Anthony's -->
+          <ul class="nav navbar-nav navbar-brand">
+            <div class="collapse navbar-collapse">
+              <li><a href="http://www.safg.org">Return to St. Anthony's</a></li>
+            </div>
+          </ul>
+
+      <!-- Main Navigation bar on non-mobile screens. Used to populate the hidden section when on mobile -->
+      <ul class="nav navbar-nav navbar-right">
+        <div class="collapse navbar-collapse" id="navigationbar">   
+
+          <ul class="nav navbar-nav navbar-right">
+
+            <!-- Church Information -->
+            <li><a href="eventInfo.html">Event Information</a></li>   <!-- UPDATE WITH LINK TO YOUR SITE -->
+
+            <!-- Current Auction Donors -->
+            <li><a href="donors.html">Current Donors</a></li>         <!-- UPDATE WITH LINK TO YOUR SITE -->
+
+
+            <!-- Past Event Photos -->
+            <li><a href="pastEvents.html">Past Event Photos</a></li>  <!-- UPDATE WITH LINK TO YOUR SITE -->
+
+            <!-- Main Auction Screen -->
+            <li><a href="main.html">Home</a></li>              <!-- UPDATE WITH LINK TO YOUR SITE -->
+          </ul>
+
+        </div> <!-- End nav -->
+      </ul>
+
+      </div> <!-- end container -->
+    </nav> <!-- End nav bar -->
+    <!-- Main page image -->
+
+ <!--***********************************************************************************
+    *                 SECTION: Main Top Image
+    * Image Used From Pixabay, which stated license: CC0 Public Domain, Free for
+    * Commerical Use / No attribution required
+    *************************************************************************************-->
+
+    <!-- header image area with image inside-->
+    <div class="container-fluid" id="mainImageContainer">
+      <div class="mainImage" id="mainImage">
+        <img src="img/headerEvent.png">
+     </div> <!-- end image section -->
+
+     <!-- Secondary Image for smaller screens -->
+      <div class="mainImageOne" id="mainImageOne">
+        <img src="img/headerEvent.png">
+     </div> <!-- end image section -->
+    </div> <!-- end container -->
+
+    <!-- decorative line break -->
+    <div id="longLineNoPadding">
+      <img src="img/line.png">
+    </div>
+
+
+
+    <!--************************************************************************************
+    *             SECTION: Main information
+    ***************************************************************************************-->
+
+    <!-- Frequently Asked Questions Container -->
+    <div class="container-fluid" id="eventInfo">
+      <div class="col-xs-4 col-md-8" id="eventCol">
+
+        <!-- Will remain one long column, per the xs12 and md12 indicators -->
+        <div class="col-xs-12 col-md-12" id="faq">
+          <h4>Click to Browse Answers to Our Frequently Asked Questions:</h4>
+        </div>
+
+        <!-- "Flip" is seen as the question. It's in "h4" to be bold and styled -->
+        <div class="flip"><p><h4>When is the Auction?</h4></p></div>
+
+          <!-- "Panel" is hidden inside of "flip". It drops down when clicked -->
+          <div class="panel">
+
+            <!-- "inner" holds the text. It has a white background for easy reading -->
+            <div class="inner">
+              <p>Saturday, October 17, 2015</p>
+            </div>
+        </div>
+
+        <!-- Next question -->
+        <div class="flip1"><p><h4>What Time do Events Begin?</h4></p></div>
+
+          <!-- Next dropdown -->
+          <div class="panel1">
+
+            <!-- Next text area -->
+            <div class="inner">
+              <p>Doors Open at 6:00 PM</p>
+              <p>Auction Begins at 6:30 PM</p>
+            </div>
+          </div>
+
+        <!-- Next question -->
+        <div class="flip2"><p><h4>Where is the Auction being held?</h4></p></div>
+
+          <!-- Next dropdown -->
+          <div class="panel2">
+
+            <!-- Next text area -->
+            <div class="inner">
+              <p>St. Anthony's Catholic Church</p>
+              <p>1660 Elm St.</p>
+              <p>Forest Grove, OR 97116</p>
+            </div>
+          </div>
+
+        <!-- Next question -->
+        <div class="flip3"><p><h4>Contact Information</h4></p></div>
+
+          <!-- Next dropdown -->
+          <div class="panel3">
+
+            <!-- Next text area -->
+            <div class="inner">
+              <p>503-357-2989</p>
+            </div>
+          </div>
+    
+    </div>
+  </div>
+
+
+  <!-- ****************************************************************************************
+  *               SECTION: Buttons!
+  *   
+  *   PLACE LINKS IN THIS SECTION!
+  *******************************************************************************************-->
+    <!-- Line with no padding -->
+    <div id="longLineNoPadding">
+      <img src="img/line.png">
+    </div>
+    <!-- Section to hold buttons, with two buttons inside -->
+    <div class="row" id="buttonBackground2">
+        <button class="buttonStuff"><strong>Join This Year's Auction</strong></button>  <!-- PLACE LINK HERE!!! -->
+        <button class="buttonStuff3"><strong>Donate An Item</strong></button>           <!-- PLACE LINK HERE!!! -->
+    </div> <!-- end button section-->
+
+    <!-- Line with no padding -->
+    <div id="longLineNoPadding">
+      <img src="img/line.png">
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="ie10-viewport-bug-workaround.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+
+    /****************************************************
+    *    Panel Dropdowns
+    * When the page loads, it will show each of the "flips"
+    * When "panel" section is clicked, it will drop down slowly
+    * When the panel section is clicked again, it will slide up
+    * slowly.
+    *****************************************************/
+    $(document).ready(function(){
+      $('.flip').click(function(){
+        $('.panel').slideDown('slow');    /* more */
+      });
+      $('.panel').click(function(){
+        $('.panel').slideUp('slow');    /* hide/less */
+      });
+
+      $('.flip1').click(function(){
+        $('.panel1').slideDown('slow');   /* more */
+      });
+      $('.panel1').click(function(){
+        $('.panel1').slideUp('slow');   /* hide/less */
+      });
+
+      $('.flip2').click(function(){
+        $('.panel2').slideDown('slow');   /* more */
+      });
+      $('.panel2').click(function(){
+        $('.panel2').slideUp('slow');   /* hide/less */
+      });
+
+      $('.flip3').click(function(){
+        $('.panel3').slideDown('slow');   /* more */
+      });
+      $('.panel3').click(function(){
+        $('.panel3').slideUp('slow');   /* hide/less */
+      });
+    });
+
+    /****************************************************
+    *    Highlighting the FAQ the ouse is on
+    * When the mouse goes into an area designated as a "flip"
+    * it will change colors.
+    * When the mouse leaves the current ("this") "flip", it
+    * will change back to the original color.
+    *****************************************************/
+    $(".flip").on({
+      mouseenter: function() {
+        $(this).css("background-color", "#CCCCCC");
+      },
+      mouseleave: function() {
+        $(this).css("background-color", "#FFFFFF");
+      }
+    });
+
+    $(".flip1").on({
+      mouseenter: function() {
+        $(this).css("background-color", "#CCCCCC");
+      },
+      mouseleave: function() {
+        $(this).css("background-color", "#FFFFFF");
+      }
+    });
+
+    $(".flip2").on({
+      mouseenter: function() {
+        $(this).css("background-color", "#CCCCCC");
+      },
+      mouseleave: function() {
+        $(this).css("background-color", "#FFFFFF");
+      }
+    });
+
+    $(".flip3").on({
+      mouseenter: function() {
+        $(this).css("background-color", "#CCCCCC");
+      },
+      mouseleave: function() {
+        $(this).css("background-color", "#FFFFFF");
+      }
+    });
+
+    </script>
+  </body>
+</html>
+
+
